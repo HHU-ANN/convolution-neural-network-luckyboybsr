@@ -138,7 +138,6 @@ def main():
 
     model = NeuralNetwork('VGG16') # 若有参数则传入参数
 
-    model = NeuralNetwork() # 若有参数则传入参数
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.dirname(current_dir)
