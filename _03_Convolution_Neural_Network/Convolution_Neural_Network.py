@@ -138,7 +138,7 @@ def main():
     parent_dir = os.path.dirname(current_dir)
     # model.load_state_dict(torch.load(parent_dir + '/pth/model.pth'))
     ###切换回在cpu加载
-    model =torch.load("../pth/model.pth", map_location=torch.device('cpu'))
+    model =torch.load(parent_dir + '/pth/model.pth', map_location=torch.device('cpu'))
 
     return model
 
