@@ -24,7 +24,7 @@ else:
 ###定义好数据集的类型
 transform = torchvision.transforms.Compose([
     torchvision.transforms.ToTensor(),
-    torchvision.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
+    torchvision.transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))
 
 ])
 ####定义好CIFAR-10的标签
