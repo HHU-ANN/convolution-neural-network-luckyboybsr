@@ -18,12 +18,12 @@ model = main()
 model = model.to('cpu')
 
 def test():
+    model.eval()
     inputs, label = random.choice(val_dataset)
-    inputs = inputs.view(1, -1)
+    inputs = inputs.unsqueeze(0)
     outputs = model(inputs)
     _, predicted = torch.max(outputs.data, 1)
     return label, predicted.item()
-
 def test0():
     label, pred = test()
     assert label == pred
