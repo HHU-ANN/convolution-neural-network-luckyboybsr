@@ -142,7 +142,7 @@ def main():
     model.load_state_dict(torch.load(parent_dir + '/pth/model.pth'))
     # state_dict = torch.load("../../pth/model.pth")  # 加载模型权重文件
     # model.load_state_dict(state_dict)  # 使用加载的权重更新模型参数
-    
+
     return model
 
     
