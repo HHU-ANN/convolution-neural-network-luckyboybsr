@@ -139,9 +139,10 @@ def main():
     model = NeuralNetwork('VGG16') # 若有参数则传入参数
     current_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.dirname(current_dir)
-    # model.load_state_dict(torch.load(parent_dir + '/pth/model.pth'))
-    state_dict = torch.load("../../pth/model.pth")  # 加载模型权重文件
-    model.load_state_dict(state_dict)  # 使用加载的权重更新模型参数
+    model.load_state_dict(torch.load(parent_dir + '/pth/model.pth'))
+    # state_dict = torch.load("../../pth/model.pth")  # 加载模型权重文件
+    # model.load_state_dict(state_dict)  # 使用加载的权重更新模型参数
+    
     return model
 
     
