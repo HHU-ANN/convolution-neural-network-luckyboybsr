@@ -12,7 +12,16 @@ import torch.optim as optim
 import torchvision
 import collections
 import numpy as np
-from tqdm import tqdm
+try:
+    from tqdm import tqdm
+except ModuleNotFoundError:
+    import subprocess
+    import sys
+
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "tqdm"])
+
+    # 重新尝试导入模块
+    from tqdm import tqdm
 from torch.utils.data import DataLoader
 ###声明使用gpu进行训练
 if torch.cuda.is_available():
